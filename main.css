@@ -1,0 +1,54 @@
+/* NAV BAR */
+
+nav ul {
+    list-style-type: none;
+    margin: 0 0 10px 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #111;
+}
+
+/* INPUT */
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding-left: 0;
+}
+
+button {
+  border-radius: 5px;
+  border: 1px solid #d3d3d3;
+  background-color: white;
+  color: #333;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+
+#remove {
+  background-color: transparent;
+  border: none;
+  color: #AA0000;
+  font-size: 14px;
+}

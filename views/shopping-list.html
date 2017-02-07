@@ -1,0 +1,28 @@
+<form ng-submit="addItem(newItem)" name="list">
+  <label>Item</label>
+  <input type="text" placeholder="Item" ng-model="newItem.name" />
+
+  <label>Quantity</label>
+  <input type="text" placeholder="Qty" ng-model="newItem.qty" />
+
+  <label>Priority</label>
+  <select ng-model="newItem.priority">
+    <option>low</option>
+    <option>high</option>
+  </select>
+  <button type="submit">Add</button>
+</form>
+
+<p>{{list}}</p>
+<button ng-click="order = 'qty'">Order by Quantity</button>
+<button ng-click="order = 'name'">Order by Name</button>
+<button ng-click="order = 'priority'">Order by Priority</button>
+<ul>
+  <li ng-repeat="item in items | orderBy: order">
+    qty: {{item.qty}} -
+    {{item.name}} -
+    priority: {{item.priority}}
+    <button id="remove" ng-click="removeItem(item)"><b>X</b></button>
+  </li>
+</ul>
+<button ng-click="removeAll()">Remove All</button>
